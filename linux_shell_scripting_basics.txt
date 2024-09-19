@@ -5,3 +5,20 @@ AWS Account
 Install putty, winscp, superputty(it allows multiple sessions to be opened like in chrom, notepad++ on our local computer
 Launch EC2 instance on the free tier version of the AWS account
 Connect to EC2 created instance through putty, superputty, winscp from the local laptop
+
+
+Understanding Line Endings
+In the world of software development, different operating systems historically used different characters to denote the end of a line in a text file. Unix-based systems, including Linux and macOS, typically use Line Feed (LF) character (represented as ‘\n’). On the other hand, Windows uses Carriage Return and Line Feed (CRLF) characters (‘\r\n’).
+
+The Git Warning: LF Will Be Replaced by CRLF
+The warning “LF will be replaced by CRLF” arises when Git detects inconsistent line endings within your project. Git wants to ensure uniformity to prevent potential issues when collaborating across multiple platforms.
+
+Ensure Git’s global configuration is attuned to handle line endings appropriately. Execute the following commands:
+
+COPY
+
+git config --global core.autocrlf input
+This global configuration ensures that when committing files to Git, CRLF is converted to LF. Setting core.autocrlf to input during global Git configuration ensures that line endings are normalized when you commit files.
+
+When you commit a file with CRLF line endings on a Windows machine, Git automatically converts them to LF before storing them in the repository.
+Conversely, if you’re on a Unix-based system committing a file with LF line endings, Git ensures that the line endings remain LF when stored in the repository/

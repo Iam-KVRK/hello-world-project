@@ -1,0 +1,7 @@
+SHELL SCRIPTING SETUP
+----------------------------------------
+
+AWS Account
+Install putty, winscp, superputty(it allows multiple sessions to be opened like in chrom, notepad++ on our local computer
+Launch EC2 instance on the free tier version of the AWS account
+Connect to EC2 created instance through putty, superputty, winscp from the local laptop
